@@ -52,7 +52,7 @@ Contributions are welcome! If you find a bug, have a suggestion, or want to add 
 - Open a pull request.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/protyayofficial/Vision-Architectures/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
 - [PyTorch](https://pytorch.org/)
