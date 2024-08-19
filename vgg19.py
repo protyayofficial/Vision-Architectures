@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 
-class VGG16(nn.Module):
+class VGG19(nn.Module):
     """
-    Implementation of the VGG16 architecture for image classification.
+    Implementation of the VGG19 architecture for image classification.
 
     Args:
         num_classes (int): Number of classes for the final classification layer. Default is 1000 for ImageNet.
@@ -37,6 +37,8 @@ class VGG16(nn.Module):
             nn.ReLU(),
             nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),
             nn.ReLU(),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),
+            nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2)
         )
 
@@ -48,11 +50,15 @@ class VGG16(nn.Module):
             nn.ReLU(),
             nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),
             nn.ReLU(),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),
+            nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2)
         )
 
         # Fifth block of convolutional layers followed by Max Pooling
         self.block5 = nn.Sequential(
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),
+            nn.ReLU(),
             nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),
             nn.ReLU(),
             nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),
@@ -73,6 +79,7 @@ class VGG16(nn.Module):
         self.fc1 = nn.Linear(in_features=self.in_features, out_features=4096)
         self.fc2 = nn.Linear(in_features=4096, out_features=4096)
         self.fc3 = nn.Linear(in_features=4096, out_features=num_classes)
+
 
     def _initialize_fc(self):
         """
@@ -95,7 +102,7 @@ class VGG16(nn.Module):
 
     def forward(self, x):
         """
-        Defines the forward pass of the VGG16 model.
+        Defines the forward pass of the VGG19 model.
 
         Args:
             x (torch.Tensor): Input tensor of shape (batch_size, 3, 224, 224).
@@ -130,8 +137,8 @@ class VGG16(nn.Module):
 if __name__ == "__main__":
     from torchsummary import summary
 
-    # Instantiate the VGG16 model and move it to the GPU
-    model = VGG16().to('cuda')
+    # Instantiate the VGG19 model and move it to the GPU
+    model = VGG19().to('cuda')
 
     # Print a summary of the model architecture
     print(summary(model, (3, 224, 224)))
