@@ -10,36 +10,13 @@ This repository contains implementations of popular vision architectures from sc
 ### Architectures Implemented:
 - [AlexNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/alexnet.py)
 - [VGG16](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg16.py)
+- [VGG19](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg19.py)
+- [GoogLeNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/googlenet.py)
 - More to come...
 
 ## Motivation
 
 As part of my deep learning journey, I am implementing popular convolutional neural network (CNN) architectures from scratch to better understand their workings and contribute to the open-source community. This repository serves as a resource for anyone looking to learn about or utilize these architectures in their projects.
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-- Python 3.7+
-- PyTorch 1.9.0+
-- Torchvision (optional, for datasets)
-- `torchsummary` (optional, for model summaries)
-
-### Installation
-
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/protyayofficial/Vision-Architectures.git
-cd Vision-Architectures-main
-```
-
-Install the Necessary dependencies: 
-```
-pip install torch torchvision
-pip install torchsummary
-```
 
 ## Contributing
 Contributions are welcome! If you find a bug, have a suggestion, or want to add a new model, feel free to open an issue or submit a pull request.
