@@ -63,6 +63,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 If you have any questions or suggestions, feel free to reach out!
 
 Protyay Dey
-Email: protyayofficial@gmail.com
-LinkedIn: linkedin.com/in/protyaydey
-GitHub: github.com/protyayofficial
+- Email: [protyayofficial@gmail.com](mailto:protyayofficial.gmail.com)
+- LinkedIn: [protyaydey](https:www.linkedin.com/in/protyaydey)
+- GitHub: [protyayofficial](https://www.github.com/protyayofficial)
+- Website: [protyayofficial.github.io](https://protyayofficial.github.io)
