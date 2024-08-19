@@ -8,8 +8,8 @@
 This repository contains implementations of popular vision architectures from scratch using PyTorch. Each model is implemented with clean, readable, and well-documented code, making it easy to understand the underlying mechanics of each architecture.
 
 ### Architectures Implemented:
-- [AlexNet](https://github.com/protyayofficial/Vision-Architectures/alexnet.py)
-- [VGG16](https://github.com/protyayofficial/Vision-Architectures/vgg16.py)
+- [AlexNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/alexnet.py)
+- [VGG16](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg16.py)
 - More to come...
 
 ## Motivation
