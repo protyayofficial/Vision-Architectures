@@ -12,7 +12,11 @@ This repository contains implementations of popular vision architectures from sc
 - [VGG16](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg16.py)
 - [VGG19](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg19.py)
 - [GoogLeNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/googlenet.py)
+- [ResNet18](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet18.py)
 - [ResNet34](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet34.py)
+- [ResNet50](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet50.py)
+- [ResNet101](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet101.py)
+- [ResNet152](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet152.py)
 - More to come...
 
 ## Motivation
