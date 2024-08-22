@@ -82,9 +82,9 @@ class Upsample(nn.Module):
         return x
 
 
-class ResNet34(nn.Module):
+class ResNet18(nn.Module):
     """
-    A PyTorch implementation of the ResNet34 architecture.
+    A PyTorch implementation of the ResNet18 architecture.
     
     Args:
         in_channels (int, optional): Number of input channels. Default is 3.
@@ -104,7 +104,6 @@ class ResNet34(nn.Module):
         # First residual block (64 channels)
         self.res_64_1 = ResidualBlock(in_channels=64, out_channels=64, kernel_size=3)
         self.res_64_2 = ResidualBlock(in_channels=64, out_channels=64, kernel_size=3)
-        self.res_64_3 = ResidualBlock(in_channels=64, out_channels=64, kernel_size=3)
         
         # Pooling and upsampling for transition to 128 channels
         self.pool_res_128 = PoolingResidual(in_channels=64, out_channels=128, kernel_size=3, stride=2)
@@ -112,8 +111,6 @@ class ResNet34(nn.Module):
 
         # Second residual block (128 channels)
         self.res_128_1 = ResidualBlock(in_channels=128, out_channels=128, kernel_size=3)
-        self.res_128_2 = ResidualBlock(in_channels=128, out_channels=128, kernel_size=3)
-        self.res_128_3 = ResidualBlock(in_channels=128, out_channels=128, kernel_size=3)
 
         # Pooling and upsampling for transition to 256 channels
         self.pool_res_256 = PoolingResidual(in_channels=128, out_channels=256, kernel_size=3, stride=2)
@@ -121,10 +118,6 @@ class ResNet34(nn.Module):
 
         # Third residual block (256 channels)
         self.res_256_1 = ResidualBlock(in_channels=256, out_channels=256, kernel_size=3)
-        self.res_256_2 = ResidualBlock(in_channels=256, out_channels=256, kernel_size=3)
-        self.res_256_3 = ResidualBlock(in_channels=256, out_channels=256, kernel_size=3)
-        self.res_256_4 = ResidualBlock(in_channels=256, out_channels=256, kernel_size=3)
-        self.res_256_5 = ResidualBlock(in_channels=256, out_channels=256, kernel_size=3)
 
         # Pooling and upsampling for transition to 512 channels
         self.pool_res_512 = PoolingResidual(in_channels=256, out_channels=512, kernel_size=3, stride=2)
@@ -132,7 +125,6 @@ class ResNet34(nn.Module):
 
         # Fourth residual block (512 channels)
         self.res_512_1 = ResidualBlock(in_channels=512, out_channels=512, kernel_size=3)
-        self.res_512_2 = ResidualBlock(in_channels=512, out_channels=512, kernel_size=3)
 
         # Final pooling and fully connected layer
         self.maxpool = nn.MaxPool2d(kernel_size=2, stride=2)
@@ -153,10 +145,6 @@ class ResNet34(nn.Module):
         x = out + x
         x = self.relu(x)
 
-        out = self.res_64_3(x)
-        x = out + x
-        x = self.relu(x)
-
         # Transition to 128 channels
         upsampledoutput = self.upsample_128(x)
         x = self.pool_res_128(x)
@@ -164,14 +152,6 @@ class ResNet34(nn.Module):
         x = self.relu(x)
 
         out = self.res_128_1(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_128_2(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_128_3(x)
         x = out + x
         x = self.relu(x)
 
@@ -185,22 +165,6 @@ class ResNet34(nn.Module):
         x = out + x
         x = self.relu(x)
 
-        out = self.res_256_2(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_256_3(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_256_4(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_256_5(x)
-        x = out + x
-        x = self.relu(x)
-
         # Transition to 512 channels
         upsampledoutput = self.upsample_512(x)
         x = self.pool_res_512(x)
@@ -208,10 +172,6 @@ class ResNet34(nn.Module):
         x = self.relu(x)
 
         out = self.res_512_1(x)
-        x = out + x
-        x = self.relu(x)
-
-        out = self.res_512_2(x)
         x = out + x
         x = self.relu(x)
 
@@ -225,8 +185,8 @@ class ResNet34(nn.Module):
 if __name__ == "__main__":
     from torchsummary import summary
 
-    # Instantiate the ResNet34 model and move it to the GPU
-    model = ResNet34().to('cuda')
+    # Instantiate the ResNet18 model and move it to the GPU
+    model = ResNet18().to('cuda')
 
     # Print a summary of the model architecture
     print(summary(model, (3, 224, 224)))
