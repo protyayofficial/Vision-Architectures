@@ -17,6 +17,10 @@ This repository contains implementations of popular vision architectures from sc
 - [ResNet50](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet50.py)
 - [ResNet101](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet101.py)
 - [ResNet152](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet152.py)
+- [DenseNet121](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet121.py)
+- [DenseNet169](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet169.py)
+- [DenseNet201](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet201.py)
+- [DenseNet264](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet264.py)
 - More to come...
 
 ## Motivation
@@ -41,6 +45,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - [AlexNet Paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) by Krizhevsky _et al._
 - [VGG Paper](https://arxiv.org/pdf/1409.1556) by Simonyan _et al._
 - [ResNet Paper](https://arxiv.org/pdf/1512.03385) by He _et al._
+- [DenseNet Paper](https://arxiv.org/pdf/1608.06993) by Huang _et al._
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out!
