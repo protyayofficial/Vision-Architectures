@@ -12,7 +12,11 @@ This repository contains implementations of popular vision architectures from sc
 - [VGG16](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg16.py)
 - [VGG19](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg19.py)
 - [GoogLeNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/googlenet.py)
+- [ResNet18](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet18.py)
 - [ResNet34](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet34.py)
+- [ResNet50](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet50.py)
+- [ResNet101](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet101.py)
+- [ResNet152](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet152.py)
 - More to come...
 
 ## Motivation
@@ -36,7 +40,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - [PyTorch](https://pytorch.org/)
 - [AlexNet Paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) by Krizhevsky _et al._
 - [VGG Paper](https://arxiv.org/pdf/1409.1556) by Simonyan _et al._
-- [ResNet Papaer](https://arxiv.org/pdf/1512.03385) by He _et al._
+- [ResNet Paper](https://arxiv.org/pdf/1512.03385) by He _et al._
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out!
