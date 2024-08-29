@@ -1,57 +1,145 @@
-# Vision Architectures from Scratch in PyTorch
+<h1 align="center" id="title">Vision Architectures from Scratch in PyTorch</h1>
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-1.9.0%2B-red)
+<p align="center"><img src="https://socialify.git.ci/protyayofficial/Vision-Architectures/image?description=1&amp;font=Jost&amp;language=1&amp;name=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
 
-## Overview
+<p id="description">This repository contains implementations of popular vision architectures from scratch using PyTorch. Each model is implemented with clean readable and well-documented code making it easy to understand the underlying mechanics of each architecture.</p>
 
-This repository contains implementations of popular vision architectures from scratch using PyTorch. Each model is implemented with clean, readable, and well-documented code, making it easy to understand the underlying mechanics of each architecture.
+<h2>🚀 Architectures Implemented:</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AlexNet</strong></td>
+      <td>Revolutionized deep learning by winning ImageNet 2012.</td>
+      <td><a href="models/alexnet.py">alexnet.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>VGG16</strong></td>
+      <td>Introduced deep networks with small (3x3) convolution filters.</td>
+      <td><a href="models/vgg16.py">vgg16.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>VGG19</strong></td>
+      <td>A deeper version of VGG16 with 19 layers, focusing on simplicity.</td>
+      <td><a href="models/vgg19.py">vgg19.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>GoogLeNet</strong></td>
+      <td>Introduced the Inception module for multi-scale feature extraction.</td>
+      <td><a href="models/googlenet.py">googlenet.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>ResNet18</strong></td>
+      <td>Introduced residual learning to ease the training of deep networks.</td>
+      <td><a href="models/resnet18.py">resnet18.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>ResNet34</strong></td>
+      <td>Scaled-up ResNet18 with 34 layers, balancing depth and performance.</td>
+      <td><a href="models/resnet34.py">resnet34.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>ResNet50</strong></td>
+      <td>Deeper ResNet with bottleneck layers for efficient training.</td>
+      <td><a href="models/resnet50.py">resnet50.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>ResNet101</strong></td>
+      <td>Extends ResNet50 to 101 layers for better feature representation.</td>
+      <td><a href="models/resnet101.py">resnet101.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>ResNet152</strong></td>
+      <td>The deepest ResNet with 152 layers, achieving top accuracy.</td>
+      <td><a href="models/resnet152.py">resnet152.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>InceptionV2</strong></td>
+      <td>Improved version of GoogLeNet with BatchNorm and efficient factorization.</td>
+      <td><a href="models/inceptionv2.py">inceptionv2.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>DenseNet121</strong></td>
+      <td>Uses dense connections to encourage feature reuse and improve efficiency.</td>
+      <td><a href="models/densenet121.py">densenet121.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>DenseNet169</strong></td>
+      <td>Extends DenseNet121 with more layers, enhancing feature reuse.</td>
+      <td><a href="models/densenet169.py">densenet169.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>DenseNet201</strong></td>
+      <td>A deeper DenseNet variant with 201 layers for improved performance.</td>
+      <td><a href="models/densenet201.py">densenet201.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>DenseNet264</strong></td>
+      <td>The deepest DenseNet variant, offering powerful feature extraction.</td>
+      <td><a href="models/densenet264.py">densenet264.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>Xception</strong></td>
+      <td>Extreme version of Inception using depthwise separable convolutions.</td>
+      <td><a href="models/xception.py">xception.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>More to come...</strong></td>
+      <td>Stay tuned for additional architectures!</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-### Architectures Implemented:
-- [AlexNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/alexnet.py)
-- [VGG16](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg16.py)
-- [VGG19](https://github.com/protyayofficial/Vision-Architectures/blob/main/vgg19.py)
-- [GoogLeNet](https://github.com/protyayofficial/Vision-Architectures/blob/main/googlenet.py)
-- [ResNet18](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet18.py)
-- [ResNet34](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet34.py)
-- [ResNet50](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet50.py)
-- [ResNet101](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet101.py)
-- [ResNet152](https://github.com/protyayofficial/Vision-Architectures/blob/main/resnet152.py)
-- [DenseNet121](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet121.py)
-- [DenseNet169](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet169.py)
-- [DenseNet201](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet201.py)
-- [DenseNet264](https://github.com/protyayofficial/Vision-Architectures/blob/main/densenet264.py)
-- More to come...
 
-## Motivation
 
-As part of my deep learning journey, I am implementing popular convolutional neural network (CNN) architectures from scratch to better understand their workings and contribute to the open-source community. This repository serves as a resource for anyone looking to learn about or utilize these architectures in their projects.
+<h2>🍰 Contribution Guidelines:</h2>
 
-## Contributing
-Contributions are welcome! If you find a bug, have a suggestion, or want to add a new model, feel free to open an issue or submit a pull request.
+<ol>
+  <li>Fork the repository. </li>
+  <li>Create your feature branch (<code>git checkout -b feature/your-feature</code>). </li>
+  <li>Commit your changes (<code>git commit -m 'Add some feature'</code>). </li>
+  <li>Push to the branch (<code>git push origin feature/your-feature</code>).</li>
+  <li>Open a pull request</li>
+</ol>
+ 
+  
+<h2>💻 Built with</h2>
 
-### How to Contribute
-- Fork the repository.
-- Create your feature branch (git checkout -b feature/your-feature).
-- Commit your changes (git commit -m 'Add some feature').
-- Push to the branch (git push origin feature/your-feature).
-- Open a pull request.
+Technologies used in the project:
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/protyayofficial/Vision-Architectures/blob/main/LICENSE) file for details.
+*   Python
+*   PyTorch
+*   Shell
 
-## Acknowledgements
-- [PyTorch](https://pytorch.org/)
-- [AlexNet Paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) by Krizhevsky _et al._
-- [VGG Paper](https://arxiv.org/pdf/1409.1556) by Simonyan _et al._
-- [ResNet Paper](https://arxiv.org/pdf/1512.03385) by He _et al._
-- [DenseNet Paper](https://arxiv.org/pdf/1608.06993) by Huang _et al._
+<h2>🛡️ License:</h2>
+This project is licensed under the MIT License - see the <a href="https://github.com/protyayofficial/Vision-Architectures/blob/main/LICENSE">LICENSE</a> file for details.
 
-## Contact
-If you have any questions or suggestions, feel free to reach out!
+<h2>🫡 Acknowledgements:</h2>
+<ul>
+    <li><a href="https://pytorch.org/">PyTorch</a></li>
+    <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet Paper</a> by Krizhevsky <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1409.1556">VGG Paper</a> by Simonyan <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1512.03385">ResNet Paper</a> by He <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1608.06993">DenseNet Paper</a> by Huang <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1512.00567">InceptionV2/V3 Paper</a> by Szegedy <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1610.02357">Xception Paper</a> by Chollet <em>et al.</em></li>
+</ul>
 
-Protyay Dey
-- Email: [protyayofficial@gmail.com](mailto:protyayofficial.gmail.com)
-- LinkedIn: [protyaydey](https:www.linkedin.com/in/protyaydey)
-- GitHub: [protyayofficial](https://www.github.com/protyayofficial)
-- Website: [protyayofficial.github.io](https://protyayofficial.github.io)
+<h2>Contact</h2>
+<p>If you have any questions or suggestions, feel free to reach out!</p>
+
+<p><strong>Protyay Dey</strong></p>
+<ul>
+    <li>Email: <a href="mailto:protyayofficial@gmail.com">protyayofficial@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/protyaydey">protyaydey</a></li>
+    <li>GitHub: <a href="https://www.github.com/protyayofficial">protyayofficial</a></li>
+    <li>Website: <a href="https://protyayofficial.github.io">protyayofficial.github.io</a></li>
+</ul>
+
