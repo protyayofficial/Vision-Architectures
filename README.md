@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the <a href="https://github
 <h2>🫡 Acknowledgements:</h2>
 <ul>
     <li><a href="https://pytorch.org/">PyTorch</a></li>
-    <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet Paper</a> by Krizhevsky <em>et al.</em></li>
+    <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet</a> by Krizhevsky <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1409.1556">VGG</a> by Simonyan <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1512.03385">ResNet</a> by He <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1608.06993">DenseNet</a> by Huang <em>et al.</em></li>
