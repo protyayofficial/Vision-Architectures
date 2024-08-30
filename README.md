@@ -90,6 +90,11 @@
       <td><a href="models/xception.py">xception.py</a></td>
     </tr>
     <tr>
+      <td><strong>MobileNet</strong></td>
+      <td>Efficient architecture using depthwise separable convolutions, optimized for mobile and embedded vision applications.</td>
+      <td><a href="models/mobilenet.py">mobilenet.py</a></td>
+    </tr>
+    <tr>
       <td><strong>More to come...</strong></td>
       <td>Stay tuned for additional architectures!</td>
       <td></td>
@@ -130,6 +135,7 @@ This project is licensed under the MIT License - see the <a href="https://github
     <li><a href="https://arxiv.org/pdf/1608.06993">DenseNet Paper</a> by Huang <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1512.00567">InceptionV2/V3 Paper</a> by Szegedy <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1610.02357">Xception Paper</a> by Chollet <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1704.04861">MobileNet Paper</a> by Howard <em>et al.</em></li>
 </ul>
 
 <h2>Contact</h2>
