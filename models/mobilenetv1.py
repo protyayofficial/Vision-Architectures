@@ -44,10 +44,10 @@ class DepthWiseSeparableConv(nn.Module):
 
         return x
     
-class MobileNet(nn.Module):
+class MobileNetV1(nn.Module):
     def __init__(self, in_channels=3, num_classes=1000):
         """
-        Implements the MobileNet architecture using depthwise separable convolutions. 
+        Implements the MobileNetV1 architecture using depthwise separable convolutions. 
         MobileNet is designed to be lightweight and efficient, making it suitable 
         for mobile and embedded vision applications.
 
@@ -126,7 +126,7 @@ class MobileNet(nn.Module):
 if __name__ == "__main__":
     from torchsummary import summary
 
-    model = MobileNet().to('cuda')
+    model = MobileNetV1().to('cuda')
 
     # Print a summary of the model architecture
     print(summary(model, (3, 224, 224)))

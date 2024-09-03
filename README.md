@@ -90,10 +90,16 @@
       <td><a href="models/xception.py">xception.py</a></td>
     </tr>
     <tr>
-      <td><strong>MobileNet</strong></td>
+      <td><strong>MobileNetV1</strong></td>
       <td>Efficient architecture using depthwise separable convolutions, optimized for mobile and embedded vision applications.</td>
-      <td><a href="models/mobilenet.py">mobilenet.py</a></td>
+      <td><a href="models/mobilenetv1.py">mobilenet.py</a></td>
     </tr>
+    <tr>
+      <td><strong>MobileNetV2</strong></td>
+      <td>Improved version of MobileNet with an inverted residual structure and linear bottleneck, designed for efficient mobile and embedded vision tasks.</td>
+      <td><a href="models/mobilenetv2.py">mobilenetv2.py</a></td>
+    </tr>
+
     <tr>
       <td><strong>More to come...</strong></td>
       <td>Stay tuned for additional architectures!</td>
@@ -135,7 +141,8 @@ This project is licensed under the MIT License - see the <a href="https://github
     <li><a href="https://arxiv.org/pdf/1608.06993">DenseNet</a> by Huang <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1512.00567">InceptionV2/V3</a> by Szegedy <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1610.02357">Xception</a> by Chollet <em>et al.</em></li>
-    <li><a href="https://arxiv.org/pdf/1704.04861">MobileNet</a> by Howard <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1704.04861">MobileNetV1</a> by Howard <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1801.04381">MobileNetV2</a> by Sandler <em>et al.</em></li>
 </ul>
 
 <h2>Contact</h2>
