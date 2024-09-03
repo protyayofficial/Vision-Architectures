@@ -99,7 +99,6 @@
       <td>Improved version of MobileNet with an inverted residual structure and linear bottleneck, designed for efficient mobile and embedded vision tasks.</td>
       <td><a href="models/mobilenetv2.py">mobilenetv2.py</a></td>
     </tr>
-
     <tr>
       <td><strong>More to come...</strong></td>
       <td>Stay tuned for additional architectures!</td>
