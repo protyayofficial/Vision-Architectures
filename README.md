@@ -101,8 +101,18 @@
     </tr>
     <tr>
       <td><strong>MNASNet</strong></td>
-      <td>Network architecture optimized through neural architecture search (NAS) for efficient mobile and embedded vision applications, offering a balance between accuracy and computational efficiency.</td>
+      <td>Network architecture optimized through neural architecture search (NAS) for efficient mobile and embedded vision applications.</td>
       <td><a href="models/mnasnet.py">mnasnet.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>MobileNetV3 Large</strong></td>
+      <td>Advanced lightweight network, includes improvements like hard swish and squeeze-and-excitation blocks for better accuracy and efficiency.</td>
+      <td><a href="models/mobilenetv3_large.py">mobilenetv3_large.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>MobileNetV3 Small</strong></td>
+      <td>Compact version of MobileNetV3, optimized for mobile and embedded vision tasks with a focus on reducing model size while maintaining performance.</td>
+      <td><a href="models/mobilenetv3_small.py">mobilenetv3_small.py</a></td>
     </tr>
     <tr>
       <td><strong>More to come...</strong></td>
@@ -148,6 +158,7 @@ This project is licensed under the MIT License - see the <a href="https://github
     <li><a href="https://arxiv.org/pdf/1704.04861">MobileNetV1</a> by Howard <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1801.04381">MobileNetV2</a> by Sandler <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1807.11626">MnasNet</a> by Tan <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1905.02244">MobileNetV3</a> by Howard <em>et al.</em></li>
 </ul>
 
 <h2>Contact</h2>
