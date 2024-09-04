@@ -100,6 +100,11 @@
       <td><a href="models/mobilenetv2.py">mobilenetv2.py</a></td>
     </tr>
     <tr>
+      <td><strong>MNASNet</strong></td>
+      <td>Network architecture optimized through neural architecture search (NAS) for efficient mobile and embedded vision applications, offering a balance between accuracy and computational efficiency.</td>
+      <td><a href="models/mnasnet.py">mnasnet.py</a></td>
+    </tr>
+    <tr>
       <td><strong>More to come...</strong></td>
       <td>Stay tuned for additional architectures!</td>
       <td></td>
@@ -142,6 +147,7 @@ This project is licensed under the MIT License - see the <a href="https://github
     <li><a href="https://arxiv.org/pdf/1610.02357">Xception</a> by Chollet <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1704.04861">MobileNetV1</a> by Howard <em>et al.</em></li>
     <li><a href="https://arxiv.org/pdf/1801.04381">MobileNetV2</a> by Sandler <em>et al.</em></li>
+    <li><a href="https://arxiv.org/pdf/1807.11626">MnasNet</a> by Tan <em>et al.</em></li>
 </ul>
 
 <h2>Contact</h2>
