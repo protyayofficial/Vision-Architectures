@@ -194,10 +194,20 @@
       <td>Compact version of MobileNetV3, optimized for mobile and embedded vision tasks with a focus on reducing model size while maintaining performance.</td>
       <td><a href="models/mobilenetv3_small.py">mobilenetv3_small.py</a></td>
     </tr>
+    <tr>
+      <td><strong>EfficientNetB0</strong></td>
+      <td>Baseline version of EfficientNet that utilizes a compound scaling method to balance network depth, width, and resolution, achieving high accuracy with fewer parameters and lower computational cost compared to previous models.</td>
+      <td><a href="models/efficientnetb0.py">efficientnetb0.py</a></td>
+    </tr>
+    <tr>
+      <td><strong>EfficientNetB1</strong></td>
+      <td>Improved version of EfficientNetB0 with additional depth and width, offering enhanced performance while maintaining efficiency through compound scaling.</td>
+      <td><a href="models/efficientnetb1.py">efficientnetb1.py</a></td>
+    </tr>
   </tbody>
 </table>
 
-<h3>2020</h3>
+
 <table>
   <thead>
     <tr>
@@ -366,6 +376,10 @@ This project is licensed under the MIT License - see the <a href="https://github
     <tr>
       <td><a href="https://arxiv.org/pdf/1905.02244"><strong>MobileNetV3</strong></a> by Howard <em>et al.</em></td>
       <td style="text-align: justify;">We present the next generation of MobileNets based on a combination of complementary search techniques as well as a novel architecture design. MobileNetV3 is tuned to mobile phone CPUs through a combination of hardware-aware network architecture search (NAS) complemented by the NetAdapt algorithm and then subsequently improved through novel architecture advances. This paper starts the exploration of how automated search algorithms and network design can work together to harness complementary approaches improving the overall state of the art. Through this process we create two new MobileNet models for release: MobileNetV3-Large and MobileNetV3-Small which are targeted for high and low resource use cases. These models are then adapted and applied to the tasks of object detection and semantic segmentation. For the task of semantic segmentation (or any dense pixel prediction), we propose a new efficient segmentation decoder Lite Reduced Atrous Spatial Pyramid Pooling (LR-ASPP). We achieve new state of the art results for mobile classification, detection and segmentation. MobileNetV3-Large is 3.2\% more accurate on ImageNet classification while reducing latency by 15\% compared to MobileNetV2. MobileNetV3-Small is 4.6\% more accurate while reducing latency by 5\% compared to MobileNetV2. MobileNetV3-Large detection is 25\% faster at roughly the same accuracy as MobileNetV2 on COCO detection. MobileNetV3-Large LR-ASPP is 30\% faster than MobileNetV2 R-ASPP at similar accuracy for Cityscapes segmentation.</td>
+    </tr>
+    <tr>
+      <td><a href="https://arxiv.org/pdf/1905.11946"><strong>EfficientNet</strong></a> by Tan <em>et al.</em></td>
+      <td style="text-align: justify;">Convolutional Neural Networks (ConvNets) are commonly developed at a fixed resource budget, and then scaled up for better accuracy if more resources are available. In this paper, we systematically study model scaling and identify that carefully balancing network depth, width, and resolution can lead to better performance. Based on this observation, we propose a new scaling method that uniformly scales all dimensions of depth/width/resolution using a simple yet highly effective compound coefficient. We demonstrate the effectiveness of this method on scaling up MobileNets and ResNet. To go even further, we use neural architecture search to design a new baseline network and scale it up to obtain a family of models, called EfficientNets, which achieve much better accuracy and efficiency than previous ConvNets. In particular, our EfficientNet-B7 achieves state-of-the-art 84.3% top-1 accuracy on ImageNet, while being 8.4x smaller and 6.1x faster on inference than the best existing ConvNet. Our EfficientNets also transfer well and achieve state-of-the-art accuracy on CIFAR-100 (91.7%), Flowers (98.8%), and 3 other transfer learning datasets, with an order of magnitude fewer parameters. </td>
     </tr>
   </tbody>
 </table>
