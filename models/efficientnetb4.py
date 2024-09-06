@@ -159,11 +159,11 @@ class MBConv(nn.Module):
             x += residual
         return x
 
-class EfficientNetB1(nn.Module):
+class EfficientNetB4(nn.Module):
     """
-    EfficientNetB1 model with variable depth and width scaling.
+    EfficientNetB4 model with variable depth and width scaling.
     """
-    def __init__(self, in_channels=3, phi=0.5, alpha=1.2, beta=1.1, num_classes=1000, dropout_rate=0.2):
+    def __init__(self, in_channels=3, phi=3, alpha=1.2, beta=1.1, num_classes=1000, dropout_rate=0.4):
         super().__init__()
 
         self.phi = phi
@@ -265,5 +265,5 @@ class EfficientNetB1(nn.Module):
 if __name__ == "__main__":
     from torchsummary import summary
 
-    model = EfficientNetB1().to("cuda")
-    summary(model, (3, 240, 240))
+    model = EfficientNetB4().to("cuda")
+    summary(model, (3, 380, 380))

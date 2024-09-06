@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from torchvision.ops import StochasticDepth
 import math
 
 class ConvBlock(nn.Module):
@@ -9,11 +8,19 @@ class ConvBlock(nn.Module):
     """
     def __init__(self, in_channels, out_channels, kernel_size, stride, padding, groups=1, bias=False):
         super().__init__()
-        self.block = nn.Sequential(
-            nn.Conv2d(in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size, stride=stride, padding=padding, groups=groups, bias=bias),
-            nn.BatchNorm2d(num_features=out_channels),
-            nn.SiLU(inplace=True)  # Swish activation
+        self.conv = nn.Conv2d(
+            in_channels=in_channels, 
+            out_channels=out_channels, 
+            kernel_size=kernel_size, 
+            stride=stride, 
+            padding=padding, 
+            groups=groups, 
+            bias=bias
         )
+
+        self.bn = nn.BatchNorm2d(num_features=out_channels)
+
+        self.act = nn.SiLU(inplace=True)  # Swish activation
 
     def forward(self, x):
         """
@@ -25,19 +32,36 @@ class ConvBlock(nn.Module):
         Returns:
             torch.Tensor: Output tensor after passing through the ConvBlock.
         """
-        return self.block(x)
+        x = self.conv(x)
+        x = self.bn(x)
+        x = self.act(x)
+
+        return x
+
 
 class SqueezeExcitation(nn.Module):
     """
     Squeeze-and-Excitation block to perform channel-wise feature recalibration.
     """
-    def __init__(self, in_channels, reduced_dims):
+    def __init__(self, in_channels, intermediate_dims):
         super().__init__()
         self.se = nn.Sequential(
-            nn.AdaptiveAvgPool2d(output_size=1),
-            nn.Conv2d(in_channels=in_channels, out_channels=reduced_dims, kernel_size=1),
+            nn.AdaptiveAvgPool2d(output_size=(1, 1)),
+
+            nn.Conv2d(
+                in_channels=in_channels, 
+                out_channels=intermediate_dims, 
+                kernel_size=1
+            ),
+
             nn.SiLU(inplace=True),
-            nn.Conv2d(in_channels=reduced_dims, out_channels=in_channels, kernel_size=1),
+
+            nn.Conv2d(
+                in_channels=intermediate_dims, 
+                out_channels=in_channels, 
+                kernel_size=1
+            ),
+
             nn.Sigmoid()
         )
 
@@ -51,31 +75,70 @@ class SqueezeExcitation(nn.Module):
         Returns:
             torch.Tensor: Scaled tensor after applying the squeeze-and-excitation block.
         """
-        scale = self.se(x)
-        return x * scale
+
+        return x * self.se(x)
 
 class MBConv(nn.Module):
     """
     Mobile Inverted Residual Block (MBConv) with depthwise separable convolution, squeeze-and-excitation, and optional expansion.
     """
-    def __init__(self, in_channels, out_channels, kernel_size, stride, expansion_factor, reduction_factor=4):
+    def __init__(self, in_channels, out_channels, kernel_size, stride, expansion_factor, reduction_factor=4, survival_prob=0.8):
         super().__init__()
 
-        intermediate_channels = in_channels * expansion_factor
-        reduced_dims = max(1, in_channels // reduction_factor)
+        self.survial_prob = survival_prob
 
         self.use_residual = (stride == 1 and in_channels == out_channels)
-        self.expand = (expansion_factor != 1)
+
+        intermediate_channels = in_channels * expansion_factor
+
+        self.expand = in_channels != intermediate_channels
+
+        intermediate_dims = int(in_channels // reduction_factor)
 
         if self.expand:
-            self.expansion = ConvBlock(in_channels=in_channels, out_channels=intermediate_channels, kernel_size=1, stride=1, padding=0)
+            self.expansion = ConvBlock(
+                in_channels=in_channels, 
+                out_channels=intermediate_channels, 
+                kernel_size=1, 
+                stride=1, 
+                padding=0
+            )
+            
 
         self.block = nn.Sequential(
-            ConvBlock(in_channels=intermediate_channels, out_channels=intermediate_channels, kernel_size=kernel_size, stride=stride, padding=(kernel_size - 1) // 2, groups=intermediate_channels),
-            SqueezeExcitation(in_channels=intermediate_channels, reduced_dims=reduced_dims),
-            nn.Conv2d(in_channels=intermediate_channels, out_channels=out_channels, kernel_size=1, stride=1, padding=0, bias=False),
+            ConvBlock(
+                in_channels=intermediate_channels, 
+                out_channels=intermediate_channels, 
+                kernel_size=kernel_size, stride=stride, 
+                padding=(kernel_size - 1) // 2, 
+                groups=intermediate_channels
+            ),
+            
+            SqueezeExcitation(
+                in_channels=intermediate_channels, 
+                intermediate_dims=intermediate_dims
+            ),
+
+            nn.Conv2d(
+                in_channels=intermediate_channels, 
+                out_channels=out_channels, 
+                kernel_size=1, 
+                stride=1, 
+                padding=0, 
+                bias=False
+            ),
+
             nn.BatchNorm2d(num_features=out_channels)
         )
+
+    def stochastic_depth(self, x):
+        if not self.training:
+            return x
+        
+        binary_tensor = torch.rand(x.shape[0], 1, 1, 1, device=x.device) < self.survial_prob
+
+        return torch.div(x, self.survial_prob) * binary_tensor
+
 
     def forward(self, x):
         """
@@ -92,6 +155,7 @@ class MBConv(nn.Module):
             x = self.expansion(x)
         x = self.block(x)
         if self.use_residual:
+            x = self.stochastic_depth(x)
             x += residual
         return x
 
@@ -102,10 +166,13 @@ class EfficientNetB0(nn.Module):
     def __init__(self, in_channels=3, phi=0, alpha=1.2, beta=1.1, num_classes=1000, dropout_rate=0.2):
         super().__init__()
 
-        self.depth_coefficient = beta ** phi
+        self.phi = phi
+        self.alpha = alpha
+        self.beta = beta
+        self.in_channels = in_channels
 
-        # [expansion factor, output channels, repeats, stride, kernel_size]
-        stages = [
+         # [expansion factor, output channels, repeats, stride, kernel_size]
+        self.stages = [
             [1, 16, 1, 1, 3],
             [6, 24, 2, 2, 3],
             [6, 40, 2, 2, 5],
@@ -115,44 +182,69 @@ class EfficientNetB0(nn.Module):
             [6, 320, 1, 1, 3],
         ]
 
-        self.stage1 = ConvBlock(in_channels=in_channels, out_channels=32, kernel_size=3, stride=2, padding=1)
+        width_factor, depth_factor = self.calculate_coeff()
 
-        input_channels = 32
-        features = []
+        last_channels = math.ceil(1280 * width_factor)
 
-        for _, (expansion_factor, output_channels, num_repeats, stride, kernel_size) in enumerate(stages):
-            num_repeats = int(self.scale_depth(num_repeats))
+        self.avgpool = nn.AdaptiveAvgPool2d(output_size=(1, 1))
 
-            for i in range(num_repeats):
-                block_stride = stride if i == 0 else 1
-
-                features.append(MBConv(in_channels=input_channels, out_channels=output_channels, kernel_size=kernel_size, stride=block_stride, expansion_factor=expansion_factor))
-                input_channels = output_channels
-
-        self.features = nn.Sequential(*features)
-
-        self.final_block = nn.Sequential(
-            ConvBlock(in_channels=input_channels, out_channels=1280, kernel_size=1, stride=1, padding=0),
-            nn.AdaptiveAvgPool2d(output_size=1)
+        self.features = self.create_features(
+            width_factor=width_factor, 
+            depth_factor=depth_factor, 
+            last_channels=last_channels
         )
 
         self.classifier = nn.Sequential(
             nn.Dropout(p=dropout_rate),
-            nn.Linear(in_features=1280, out_features=num_classes)
+            nn.Linear(in_features=last_channels, out_features=num_classes)
         )
 
+        
+    def create_features(self, width_factor, depth_factor, last_channels):
+        channels = int(32 * width_factor)
 
-    def scale_depth(self, depth):
-        """
-        Scale the depth of the network based on the depth coefficient.
+        features = [
+            ConvBlock(in_channels=self.in_channels, out_channels=channels, kernel_size=3, stride=2, padding=1),
+        ]
+
+        in_channels = channels
+
+        for expansion_factor, channels, repeats, stride, kernel_size in self.stages:
+            out_channels = 4 * math.ceil(int(channels * width_factor) / 4)  #in order to keep it divisible by reduction factor
+
+            layer_repeat = math.ceil(repeats * depth_factor)
+
+            for layer in range(layer_repeat):
+                features.append(
+                    MBConv(
+                        in_channels=in_channels,
+                        out_channels=out_channels,
+                        kernel_size=kernel_size,
+                        stride=stride if layer==0 else 1,
+                        expansion_factor=expansion_factor,
+                    )
+                )
+
+                in_channels=out_channels
+
+        features.append(
+            ConvBlock(
+                in_channels=in_channels,
+                out_channels=last_channels,
+                kernel_size=1,
+                stride=1,
+                padding=0
+            )
+        )
+        return nn.Sequential(*features)
         
-        Args:
-            depth (int): Number of repetitions to scale.
-        
-        Returns:
-            int: Scaled number of repetitions.
-        """
-        return math.ceil(depth * self.depth_coefficient)
+
+    def calculate_coeff(self):
+        width_coefficient = self.beta ** self.phi
+        depth_coefficient = self.alpha ** self.phi
+
+        return width_coefficient, depth_coefficient
+
 
     def forward(self, x):
         """
@@ -164,9 +256,8 @@ class EfficientNetB0(nn.Module):
         Returns:
             torch.Tensor: Output tensor after passing through the EfficientNet model.
         """
-        x = self.stage1(x)
         x = self.features(x)
-        x = self.final_block(x)
+        x = self.avgpool(x)
         x = x.view(x.size(0), -1)  # Flatten
         x = self.classifier(x)
         return x

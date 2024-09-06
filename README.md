@@ -204,18 +204,41 @@
       <td>Improved version of EfficientNetB0 with additional depth and width, offering enhanced performance while maintaining efficiency through compound scaling.</td>
       <td><a href="models/efficientnetb1.py">efficientnetb1.py</a></td>
     </tr>
+    <tr>
+      <td><strong>EfficientNetB2</strong></td>
+        <td>Has a resolution of 260x260 and φ=1.0, offering a balance of increased accuracy while keeping computational cost reasonable through efficient compound scaling.</td>
+        <td><a href="models/efficientnetb2.py">efficientnetb2.py</a></td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNetB3</strong></td>
+        <td>Increases the resolution to 300x300 and φ=2, enabling it to handle more complex tasks while still being computationally efficient for larger datasets.</td>
+        <td><a href="models/efficientnetb3.py">efficientnetb3.py</a></td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNetB4</strong></td>
+        <td>With a resolution of 380x380 and φ=3, it provides higher accuracy and is suited for more computationally demanding tasks requiring greater feature extraction.</td>
+        <td><a href="models/efficientnetb4.py">efficientnetb4.py</a></td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNetB5</strong></td>
+        <td>Features a resolution of 456x456 and φ=4, making it effective for high-resolution image datasets and more sophisticated vision tasks.</td>
+        <td><a href="models/efficientnetb5.py">efficientnetb5.py</a></td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNetB6</strong></td>
+        <td>With a resolution of 528x528 and φ=5, it is designed for handling complex tasks with increased accuracy, balancing efficiency with computational power.</td>
+        <td><a href="models/efficientnetb6.py">efficientnetb6.py</a></td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNetB7</strong></td>
+        <td>Boasts a resolution of 600x600 and φ=6, the largest in the family, providing state-of-the-art performance on high-resolution tasks while being computationally efficient.</td>
+        <td><a href="models/efficientnetb7.py">efficientnetb7.py</a></td>
+      </tr>
   </tbody>
 </table>
 
 
 <table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>Description</th>
-      <th>Link</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td><strong>More to come...</strong></td>
@@ -319,10 +342,7 @@ This project is licensed under the MIT License - see the <a href="https://github
   <tbody>
     <tr>
       <td><a href="https://arxiv.org/pdf/1608.06993"><strong>DenseNet</strong></a> by Huang <em>et al.</em></td>
-      <td style="text-align: justify;">Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L connections - one between each layer and its subsequent layer - our network has L(L+1)/2 direct connections. For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers. DenseNets have several compelling advantages: they alleviate the vanishing-gradient problem, strengthen feature propagation, encourage feature reuse, and substantially reduce the number of parameters. We evaluate our proposed architecture on four highly competitive object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet). DenseNets obtain significant improvements over the state-of-the-art on most of them, whilst requiring less computation to achieve high performance. </td>
-    </tr>
-  </tbody>
-</table>
+      <td style="text-align: justify;">Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L conmodels/efficientnetb5.py
 
 <h3>2017</h3>
 <table>
