@@ -135,7 +135,7 @@ class MBConv(nn.Module):
         if not self.training:
             return x
         
-        binary_tensor = torch.rand(x.shape[0], 1, 1, 1, device=x.device) < self.survial_prob
+        binary_tensor = torch.rand(x.shape[0], 1, 1, 1, device=x.device) < self.survival_prob
 
         return torch.div(x, self.survival_prob) * binary_tensor
 
@@ -174,7 +174,7 @@ class FusedMBConv(nn.Module):
         if not self.training:
             return x
         
-        binary_tensor = torch.rand(x.shape[0], 1, 1, 1, device=x.device) < self.survial_prob
+        binary_tensor = torch.rand(x.shape[0], 1, 1, 1, device=x.device) < self.survival_prob
 
         return torch.div(x, self.survival_prob) * binary_tensor
 
