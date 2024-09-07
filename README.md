@@ -36,13 +36,12 @@
   <tbody>
     <tr>
       <td><strong>VGG16</strong></td>
-      <td>Introduced deep networks with small (3x3) convolution filters.</td>
+      <td rowspan="2">The VGG models are known for their deep network architecture with small 3x3 convolution filters. VGG16 uses 16 layers and is recognized for its simplicity and effectiveness, while VGG19 extends this to 19 layers for potentially better feature extraction.</td>
       <td><a href="models/vgg16.py">vgg16.py</a></td>
     </tr>
     <tr>
-      <td><strong>VGG19</strong></td>
-      <td>A deeper version of VGG16 with 19 layers, focusing on simplicity.</td>
-      <td><a href="models/vgg19.py">vgg19.py</a></td>
+        <td><strong>VGG19</strong></td>
+        <td><a href="models/vgg19.py">vgg19.py</a></td>
     </tr>
     <tr>
       <td><strong>GoogLeNet</strong></td>
@@ -64,33 +63,29 @@
   <tbody>
     <tr>
       <td><strong>ResNet18</strong></td>
-      <td>Introduced residual learning to ease the training of deep networks.</td>
+      <td rowspan="5">The ResNet family introduces residual learning to facilitate the training of deep networks. ResNet18 and ResNet34 are shallower models offering a balance between depth and performance, while ResNet50, ResNet101, and ResNet152 progressively increase depth and complexity to improve feature representation and accuracy.</td>
       <td><a href="models/resnet18.py">resnet18.py</a></td>
     </tr>
     <tr>
-      <td><strong>ResNet34</strong></td>
-      <td>Scaled-up ResNet18 with 34 layers, balancing depth and performance.</td>
-      <td><a href="models/resnet34.py">resnet34.py</a></td>
+        <td><strong>ResNet34</strong></td>
+        <td><a href="models/resnet34.py">resnet34.py</a></td>
     </tr>
     <tr>
-      <td><strong>ResNet50</strong></td>
-      <td>Deeper ResNet with bottleneck layers for efficient training.</td>
-      <td><a href="models/resnet50.py">resnet50.py</a></td>
+        <td><strong>ResNet50</strong></td>
+        <td><a href="models/resnet50.py">resnet50.py</a></td>
     </tr>
     <tr>
-      <td><strong>ResNet101</strong></td>
-      <td>Extends ResNet50 to 101 layers for better feature representation.</td>
-      <td><a href="models/resnet101.py">resnet101.py</a></td>
+        <td><strong>ResNet101</strong></td>
+        <td><a href="models/resnet101.py">resnet101.py</a></td>
     </tr>
     <tr>
-      <td><strong>ResNet152</strong></td>
-      <td>The deepest ResNet with 152 layers, achieving top accuracy.</td>
-      <td><a href="models/resnet152.py">resnet152.py</a></td>
+        <td><strong>ResNet152</strong></td>
+        <td><a href="models/resnet152.py">resnet152.py</a></td>
     </tr>
     <tr>
-      <td><strong>InceptionV2</strong></td>
-      <td>Improved version of GoogLeNet with BatchNorm and efficient factorization.</td>
-      <td><a href="models/inceptionv2.py">inceptionv2.py</a></td>
+        <td><strong>InceptionV2</strong></td>
+        <td>Enhances the original GoogLeNet architecture with BatchNorm and efficient factorization for improved performance and reduced computational cost.</td>
+        <td><a href="models/inceptionv2.py">inceptionv2.py</a></td>
     </tr>
   </tbody>
 </table>
@@ -107,23 +102,20 @@
   <tbody>
     <tr>
       <td><strong>DenseNet121</strong></td>
-      <td>Uses dense connections to encourage feature reuse and improve efficiency.</td>
+      <td rowspan="4">The DenseNet family utilizes dense connections to enhance feature reuse and improve efficiency. DenseNet121 is the baseline model, while DenseNet169, DenseNet201, and DenseNet264 progressively increase in depth, with DenseNet264 being the deepest variant for the most powerful feature extraction.</td>
       <td><a href="models/densenet121.py">densenet121.py</a></td>
     </tr>
     <tr>
-      <td><strong>DenseNet169</strong></td>
-      <td>Extends DenseNet121 with more layers, enhancing feature reuse.</td>
-      <td><a href="models/densenet169.py">densenet169.py</a></td>
+        <td><strong>DenseNet169</strong></td>
+        <td><a href="models/densenet169.py">densenet169.py</a></td>
     </tr>
     <tr>
-      <td><strong>DenseNet201</strong></td>
-      <td>A deeper DenseNet variant with 201 layers for improved performance.</td>
-      <td><a href="models/densenet201.py">densenet201.py</a></td>
+        <td><strong>DenseNet201</strong></td>
+        <td><a href="models/densenet201.py">densenet201.py</a></td>
     </tr>
     <tr>
-      <td><strong>DenseNet264</strong></td>
-      <td>The deepest DenseNet variant, offering powerful feature extraction.</td>
-      <td><a href="models/densenet264.py">densenet264.py</a></td>
+        <td><strong>DenseNet264</strong></td>
+        <td><a href="models/densenet264.py">densenet264.py</a></td>
     </tr>
   </tbody>
 </table>
@@ -185,54 +177,72 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>MobileNetV3 Large</strong></td>
-      <td>Advanced lightweight network, includes improvements like hard swish and squeeze-and-excitation blocks for better accuracy and efficiency.</td>
-      <td><a href="models/mobilenetv3_large.py">mobilenetv3_large.py</a></td>
-    </tr>
-    <tr>
       <td><strong>MobileNetV3 Small</strong></td>
-      <td>Compact version of MobileNetV3, optimized for mobile and embedded vision tasks with a focus on reducing model size while maintaining performance.</td>
+      <td rowspan="2">The Large variant offers advanced features like hard swish and squeeze-and-excitation blocks for enhanced accuracy, while the Small variant focuses on reducing model size without compromising performance.</td>
       <td><a href="models/mobilenetv3_small.py">mobilenetv3_small.py</a></td>
-    </tr>
+      </tr>
+      <tr>
+          <td><strong>MobileNetV3 Large</strong></td>
+          <td><a href="models/mobilenetv3_large.py">mobilenetv3_large.py</a></td>
+      </tr>
     <tr>
-      <td><strong>EfficientNetB0</strong></td>
-      <td>Baseline version of EfficientNet that utilizes a compound scaling method to balance network depth, width, and resolution, achieving high accuracy with fewer parameters and lower computational cost compared to previous models.</td>
-      <td><a href="models/efficientnetb0.py">efficientnetb0.py</a></td>
-    </tr>
+        <td><strong>EfficientNetB0</strong></td>
+        <td rowspan="8">The EfficientNet-B series uses a compound scaling method to balance depth, width, and resolution across different models. Each version scales up these dimensions to improve accuracy and handle more complex tasks, while maintaining efficiency. The series ranges from B0 with baseline performance to B7, which provides top-tier performance for high-resolution tasks.</td>
+        <td><a href="models/efficientnetb0.py">efficientnetb0.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB1</strong></td>
+          <td><a href="models/efficientnetb1.py">efficientnetb1.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB2</strong></td>
+          <td><a href="models/efficientnetb2.py">efficientnetb2.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB3</strong></td>
+          <td><a href="models/efficientnetb3.py">efficientnetb3.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB4</strong></td>
+          <td><a href="models/efficientnetb4.py">efficientnetb4.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB5</strong></td>
+          <td><a href="models/efficientnetb5.py">efficientnetb5.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB6</strong></td>
+          <td><a href="models/efficientnetb6.py">efficientnetb6.py</a></td>
+      </tr>
+      <tr>
+          <td><strong>EfficientNetB7</strong></td>
+          <td><a href="models/efficientnetb7.py">efficientnetb7.py</a></td>
+      </tr>
+  </tbody>
+</table>
+
+<h3>2021</h3>
+<table>
+  <thead>
     <tr>
-      <td><strong>EfficientNetB1</strong></td>
-      <td>Improved version of EfficientNetB0 with additional depth and width, offering enhanced performance while maintaining efficiency through compound scaling.</td>
-      <td><a href="models/efficientnetb1.py">efficientnetb1.py</a></td>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Link</th>
     </tr>
-    <tr>
-      <td><strong>EfficientNetB2</strong></td>
-        <td>Has a resolution of 260x260 and φ=1.0, offering a balance of increased accuracy while keeping computational cost reasonable through efficient compound scaling.</td>
-        <td><a href="models/efficientnetb2.py">efficientnetb2.py</a></td>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>EfficientNetV2-S</strong></td>
+          <td rowspan="3">EfficientNetV2 models, including S, M, and L variants, utilize advanced depthwise separable convolutions and optimized MBConv and Fused MBConv blocks.</td>
+          <td><a href="models/efficientnetv2_s.py">efficientnetv2_s.py</a></td>
       </tr>
       <tr>
-        <td><strong>EfficientNetB3</strong></td>
-        <td>Increases the resolution to 300x300 and φ=2, enabling it to handle more complex tasks while still being computationally efficient for larger datasets.</td>
-        <td><a href="models/efficientnetb3.py">efficientnetb3.py</a></td>
+          <td><strong>EfficientNetV2-M</strong></td>
+          <td><a href="models/efficientnetv2_m.py">efficientnetv2_m.py</a></td>
       </tr>
       <tr>
-        <td><strong>EfficientNetB4</strong></td>
-        <td>With a resolution of 380x380 and φ=3, it provides higher accuracy and is suited for more computationally demanding tasks requiring greater feature extraction.</td>
-        <td><a href="models/efficientnetb4.py">efficientnetb4.py</a></td>
-      </tr>
-      <tr>
-        <td><strong>EfficientNetB5</strong></td>
-        <td>Features a resolution of 456x456 and φ=4, making it effective for high-resolution image datasets and more sophisticated vision tasks.</td>
-        <td><a href="models/efficientnetb5.py">efficientnetb5.py</a></td>
-      </tr>
-      <tr>
-        <td><strong>EfficientNetB6</strong></td>
-        <td>With a resolution of 528x528 and φ=5, it is designed for handling complex tasks with increased accuracy, balancing efficiency with computational power.</td>
-        <td><a href="models/efficientnetb6.py">efficientnetb6.py</a></td>
-      </tr>
-      <tr>
-        <td><strong>EfficientNetB7</strong></td>
-        <td>Boasts a resolution of 600x600 and φ=6, the largest in the family, providing state-of-the-art performance on high-resolution tasks while being computationally efficient.</td>
-        <td><a href="models/efficientnetb7.py">efficientnetb7.py</a></td>
+          <td><strong>EfficientNetV2-L</strong></td>
+          <td><a href="models/efficientnetv2_l.py">efficientnetv2_l.py</a></td>
       </tr>
   </tbody>
 </table>
@@ -343,6 +353,9 @@ This project is licensed under the MIT License - see the <a href="https://github
     <tr>
       <td><a href="https://arxiv.org/pdf/1608.06993"><strong>DenseNet</strong></a> by Huang <em>et al.</em></td>
       <td style="text-align: justify;">Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L conmodels/efficientnetb5.py
+    </tr>
+  </tbody>
+</table>
 
 <h3>2017</h3>
 <table>
@@ -400,6 +413,22 @@ This project is licensed under the MIT License - see the <a href="https://github
     <tr>
       <td><a href="https://arxiv.org/pdf/1905.11946"><strong>EfficientNet</strong></a> by Tan <em>et al.</em></td>
       <td style="text-align: justify;">Convolutional Neural Networks (ConvNets) are commonly developed at a fixed resource budget, and then scaled up for better accuracy if more resources are available. In this paper, we systematically study model scaling and identify that carefully balancing network depth, width, and resolution can lead to better performance. Based on this observation, we propose a new scaling method that uniformly scales all dimensions of depth/width/resolution using a simple yet highly effective compound coefficient. We demonstrate the effectiveness of this method on scaling up MobileNets and ResNet. To go even further, we use neural architecture search to design a new baseline network and scale it up to obtain a family of models, called EfficientNets, which achieve much better accuracy and efficiency than previous ConvNets. In particular, our EfficientNet-B7 achieves state-of-the-art 84.3% top-1 accuracy on ImageNet, while being 8.4x smaller and 6.1x faster on inference than the best existing ConvNet. Our EfficientNets also transfer well and achieve state-of-the-art accuracy on CIFAR-100 (91.7%), Flowers (98.8%), and 3 other transfer learning datasets, with an order of magnitude fewer parameters. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2019</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Paper</th>
+      <th>Abstract</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://arxiv.org/pdf/2104.00298"><strong>EfficientNetV2</strong></a> by Tan <em>et al.</em></td>
+      <td style="text-align: justify;">This paper introduces EfficientNetV2, a new family of convolutional networks that have faster training speed and better parameter efficiency than previous models. To develop this family of models, we use a combination of training-aware neural architecture search and scaling, to jointly optimize training speed and parameter efficiency. The models were searched from the search space enriched with new ops such as Fused-MBConv. Our experiments show that EfficientNetV2 models train much faster than state-of-the-art models while being up to 6.8x smaller. Our training can be further sped up by progressively increasing the image size during training, but it often causes a drop in accuracy. To compensate for this accuracy drop, we propose to adaptively adjust regularization (e.g., dropout and data augmentation) as well, such that we can achieve both fast training and good accuracy. With progressive learning, our EfficientNetV2 significantly outperforms previous models on ImageNet and CIFAR/Cars/Flowers datasets. By pretraining on the same ImageNet21k, our EfficientNetV2 achieves 87.3% top-1 accuracy on ImageNet ILSVRC2012, outperforming the recent ViT by 2.0% accuracy while training 5x-11x faster using the same computing resources. </td>
     </tr>
   </tbody>
 </table>
