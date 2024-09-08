@@ -251,7 +251,6 @@ Technologies used in the project:
 
 *   Python
 *   PyTorch
-*   Shell
 
 <h2>🛡️ License:</h2>
 This project is licensed under the MIT License - see the <a href="https://github.com/protyayofficial/Vision-Architectures/blob/main/LICENSE">LICENSE</a> file for details.
