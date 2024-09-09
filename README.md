@@ -4,7 +4,9 @@
 
 <p id="description">This repository contains implementations of popular vision architectures from scratch using PyTorch. Each model is implemented with clean readable and well-documented code making it easy to understand the underlying mechanics of each architecture.</p>
 
-<h2>🚀 Architectures Implemented:</h2>
+<h2>🚀 Architectures Implemented</h2>
+
+<h2> 1. Convolutional Neural Networks (CNNs) </h2>
 
 <h3>2012</h3>
 <table>
@@ -226,6 +228,30 @@
       </tr>
       <tr>
           <td><a href="models/efficientnetv2_l.py">efficientnetv2_l.py</a></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2> 2. Attention-based Architectures </h2>
+
+<h3>2017</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">Abstract</th>
+      <th style="text-align: center">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td rowspan="2"><a href="https://arxiv.org/pdf/1704.06904"><strong>Residual Attention Network</strong></a> by Wang <em>et al.</em></td>
+          <td rowspan="2" style="text-align: justify;">In this work, we propose "Residual Attention Network", a convolutional neural network using attention mechanism which can incorporate with state-of-art feed forward network architecture in an end-to-end training fashion. Our Residual Attention Network is built by stacking Attention Modules which generate attention-aware features. The attention-aware features from different modules change adaptively as layers going deeper. Inside each Attention Module, bottom-up top-down feedforward structure is used to unfold the feedforward and feedback attention process into a single feedforward process. Importantly, we propose attention residual learning to train very deep Residual Attention Networks which can be easily scaled up to hundreds of layers. Extensive analyses are conducted on CIFAR-10 and CIFAR-100 datasets to verify the effectiveness of every module mentioned above. Our Residual Attention Network achieves state-of-the-art object recognition performance on three benchmark datasets including CIFAR-10 (3.90% error), CIFAR-100 (20.45% error) and ImageNet (4.8% single model and single crop, top-5 error). Note that, our method achieves 0.6% top-1 accuracy improvement with 46% trunk depth and 69% forward FLOPs comparing to ResNet-200. The experiment also demonstrates that our network is robust against noisy labels.
+</td>
+          <td><a href="models/RAN56.py">RAN56.py</a></td>
+      </tr>
+      <tr>
+          <td><a href="models/RAN92.py">RAN92.py</a></td>
       </tr>
   </tbody>
 </table>
