@@ -125,6 +125,14 @@
   </thead>
   <tbody>
     <tr>
+      <td rowspan="2"><a href="https://arxiv.org/pdf/1611.05431"><strong>ResNeXt</strong></a> by Xie <em>et al.</em></td>
+        <td rowspan="2" style="text-align: justify;">We present a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call "cardinality" (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width. On the ImageNet-1K dataset, we empirically show that even under the restricted condition of maintaining complexity, increasing cardinality is able to improve classification accuracy. Moreover, increasing cardinality is more effective than going deeper or wider when we increase the capacity. Our models, named ResNeXt, are the foundations of our entry to the ILSVRC 2016 classification task in which we secured 2nd place. We further investigate ResNeXt on an ImageNet-5K set and the COCO detection set, also showing better results than its ResNet counterpart. The code and models are publicly available online.</td>
+        <td><a href="models/resnext50.py">resnext50.py</a></td>
+    </tr>
+    <tr>
+      <td><a href="models/resnext101.py">resnext101.py</a></td>
+    </tr>
+    <tr>
       <td><a href="https://arxiv.org/pdf/1610.02357"><strong>Xception</strong></a> by Chollet <em>et al.</em></td>
       <td style="text-align: justify;">We present an interpretation of Inception modules in convolutional neural networks as being an intermediate step in-between regular convolution and the depthwise separable convolution operation (a depthwise convolution followed by a pointwise convolution). In this light, a depthwise separable convolution can be understood as an Inception module with a maximally large number of towers. This observation leads us to propose a novel deep convolutional neural network architecture inspired by Inception, where Inception modules have been replaced with depthwise separable convolutions. We show that this architecture, dubbed Xception, slightly outperforms Inception V3 on the ImageNet dataset (which Inception V3 was designed for), and significantly outperforms Inception V3 on a larger image classification dataset comprising 350 million images and 17,000 classes. Since the Xception architecture has the same number of parameters as Inception V3, the performance gains are not due to increased capacity but rather to a more efficient use of model parameters.</td>
       <td><a href="models/xception.py">xception.py</a></td>
