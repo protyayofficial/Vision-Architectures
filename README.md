@@ -112,7 +112,7 @@
         <td><a href="models/densenet264.py">densenet264.py</a></td>
     </tr>
     <tr>
-      <td><a href=""><strong>SqueezeNet</strong></a> by Iandola <em>et al.</em></td>
+      <td><a href="https://arxiv.org/pdf/1602.07360"><strong>SqueezeNet</strong></a> by Iandola <em>et al.</em></td>
       <td style="text-align: justify">Recent research on deep neural networks has focused primarily on improving accuracy. For a given accuracy level, it is typically possible to identify multiple DNN architectures that achieve that accuracy level. With equivalent accuracy, smaller DNN architectures offer at least three advantages: (1) Smaller DNNs require less communication across servers during distributed training. (2) Smaller DNNs require less bandwidth to export a new model from the cloud to an autonomous car. (3) Smaller DNNs are more feasible to deploy on FPGAs and other hardware with limited memory. To provide all of these advantages, we propose a small DNN architecture called SqueezeNet. SqueezeNet achieves AlexNet-level accuracy on ImageNet with 50x fewer parameters. Additionally, with model compression techniques we are able to compress SqueezeNet to less than 0.5MB (510x smaller than AlexNet).</td>
       <td><a href="models/squeezenet.py">squeezenet.py</a></td>
     </tr>
@@ -146,14 +146,6 @@
       <td><a href="https://arxiv.org/pdf/1704.04861"><strong>MobileNetV1</strong></a> by Howard <em>et al.</em></td>
       <td style="text-align: justify;">We present a class of efficient models called MobileNets for mobile and embedded vision applications. MobileNets are based on a streamlined architecture that uses depth-wise separable convolutions to build light weight deep neural networks. We introduce two simple global hyper-parameters that efficiently trade off between latency and accuracy. These hyper-parameters allow the model builder to choose the right sized model for their application based on the constraints of the problem. We present extensive experiments on resource and accuracy tradeoffs and show strong performance compared to other popular models on ImageNet classification. We then demonstrate the effectiveness of MobileNets across a wide range of applications and use cases including object detection, finegrain classification, face attributes and large scale geo-localization.</td>
       <td><a href="models/mobilenetv1.py">mobilenetv1.py</a></td>
-    </tr>
-    <tr>
-      <td rowspan="2"><a href="https://arxiv.org/pdf/1709.01507"><strong>SENet</strong></a> by Hu <em>et al.</em></td>
-      <td rowspan="2" style="text-align: justify;">The central building block of convolutional neural networks (CNNs) is the convolution operator, which enables networks to construct informative features by fusing both spatial and channel-wise information within local receptive fields at each layer. A broad range of prior research has investigated the spatial component of this relationship, seeking to strengthen the representational power of a CNN by enhancing the quality of spatial encodings throughout its feature hierarchy. In this work, we focus instead on the channel relationship and propose a novel architectural unit, which we term the "Squeeze-and-Excitation" (SE) block, that adaptively recalibrates channel-wise feature responses by explicitly modelling interdependencies between channels. We show that these blocks can be stacked together to form SENet architectures that generalise extremely effectively across different datasets. We further demonstrate that SE blocks bring significant improvements in performance for existing state-of-the-art CNNs at slight additional computational cost. Squeeze-and-Excitation Networks formed the foundation of our ILSVRC 2017 classification submission which won first place and reduced the top-5 error to 2.251%, surpassing the winning entry of 2016 by a relative improvement of ~25%.</td>
-      <td><a href="models/seresnet50.py">seresnet50.py</a></td>
-    </tr>
-    <tr>
-      <td><a href="models/seresnext50.py">seresnext50.py</a></td>
     </tr>
   </tbody>
 </table>
@@ -268,12 +260,20 @@
       <tr>
           <td rowspan="2"><a href="https://arxiv.org/pdf/1704.06904"><strong>Residual Attention Network</strong></a> by Wang <em>et al.</em></td>
           <td rowspan="2" style="text-align: justify;">In this work, we propose "Residual Attention Network", a convolutional neural network using attention mechanism which can incorporate with state-of-art feed forward network architecture in an end-to-end training fashion. Our Residual Attention Network is built by stacking Attention Modules which generate attention-aware features. The attention-aware features from different modules change adaptively as layers going deeper. Inside each Attention Module, bottom-up top-down feedforward structure is used to unfold the feedforward and feedback attention process into a single feedforward process. Importantly, we propose attention residual learning to train very deep Residual Attention Networks which can be easily scaled up to hundreds of layers. Extensive analyses are conducted on CIFAR-10 and CIFAR-100 datasets to verify the effectiveness of every module mentioned above. Our Residual Attention Network achieves state-of-the-art object recognition performance on three benchmark datasets including CIFAR-10 (3.90% error), CIFAR-100 (20.45% error) and ImageNet (4.8% single model and single crop, top-5 error). Note that, our method achieves 0.6% top-1 accuracy improvement with 46% trunk depth and 69% forward FLOPs comparing to ResNet-200. The experiment also demonstrates that our network is robust against noisy labels.
-</td>
+          </td>
           <td><a href="models/RAN56.py">RAN56.py</a></td>
       </tr>
       <tr>
           <td><a href="models/RAN92.py">RAN92.py</a></td>
       </tr>
+      <tr>
+      <td rowspan="2"><a href="https://arxiv.org/pdf/1709.01507"><strong>SENet</strong></a> by Hu <em>et al.</em></td>
+      <td rowspan="2" style="text-align: justify;">The central building block of convolutional neural networks (CNNs) is the convolution operator, which enables networks to construct informative features by fusing both spatial and channel-wise information within local receptive fields at each layer. A broad range of prior research has investigated the spatial component of this relationship, seeking to strengthen the representational power of a CNN by enhancing the quality of spatial encodings throughout its feature hierarchy. In this work, we focus instead on the channel relationship and propose a novel architectural unit, which we term the "Squeeze-and-Excitation" (SE) block, that adaptively recalibrates channel-wise feature responses by explicitly modelling interdependencies between channels. We show that these blocks can be stacked together to form SENet architectures that generalise extremely effectively across different datasets. We further demonstrate that SE blocks bring significant improvements in performance for existing state-of-the-art CNNs at slight additional computational cost. Squeeze-and-Excitation Networks formed the foundation of our ILSVRC 2017 classification submission which won first place and reduced the top-5 error to 2.251%, surpassing the winning entry of 2016 by a relative improvement of ~25%.</td>
+      <td><a href="models/seresnet50.py">seresnet50.py</a></td>
+    </tr>
+    <tr>
+      <td><a href="models/seresnext50.py">seresnext50.py</a></td>
+    </tr>
   </tbody>
 </table>
 
