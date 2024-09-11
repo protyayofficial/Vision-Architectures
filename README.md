@@ -98,7 +98,7 @@
   </thead>
   <tbody>
     <tr>
-      <td rowspan="4"><a href=""><strong>DenseNet</strong></a> by  <em>et al.</em></td>
+      <td rowspan="4"><a href=""><strong>DenseNet</strong></a> by Huang <em>et al.</em></td>
       <td rowspan="4" style="text-align: justify">Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L connections - one between each layer and its subsequent layer - our network has L(L+1)/2 direct connections. For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers. DenseNets have several compelling advantages: they alleviate the vanishing-gradient problem, strengthen feature propagation, encourage feature reuse, and substantially reduce the number of parameters. We evaluate our proposed architecture on four highly competitive object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet). DenseNets obtain significant improvements over the state-of-the-art on most of them, whilst requiring less computation to achieve high performance. </td>
       <td><a href="models/densenet121.py">densenet121.py</a></td>
     </tr>
@@ -110,6 +110,11 @@
     </tr>
     <tr>
         <td><a href="models/densenet264.py">densenet264.py</a></td>
+    </tr>
+    <tr>
+      <td><a href=""><strong>SqueezeNet</strong></a> by Iandola <em>et al.</em></td>
+      <td style="text-align: justify">Recent research on deep neural networks has focused primarily on improving accuracy. For a given accuracy level, it is typically possible to identify multiple DNN architectures that achieve that accuracy level. With equivalent accuracy, smaller DNN architectures offer at least three advantages: (1) Smaller DNNs require less communication across servers during distributed training. (2) Smaller DNNs require less bandwidth to export a new model from the cloud to an autonomous car. (3) Smaller DNNs are more feasible to deploy on FPGAs and other hardware with limited memory. To provide all of these advantages, we propose a small DNN architecture called SqueezeNet. SqueezeNet achieves AlexNet-level accuracy on ImageNet with 50x fewer parameters. Additionally, with model compression techniques we are able to compress SqueezeNet to less than 0.5MB (510x smaller than AlexNet).</td>
+      <td><a href="models/squeezenet.py">squeezenet.py</a></td>
     </tr>
   </tbody>
 </table>
