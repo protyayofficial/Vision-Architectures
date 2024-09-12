@@ -277,6 +277,24 @@
   </tbody>
 </table>
 
+<h3>2018</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">Abstract</th>
+      <th style="text-align: center">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://arxiv.org/pdf/1704.06904"><strong>CBAM</strong></a> by Woo <em>et al.</em></td>
+          <td style="text-align: justify;">We propose Convolutional Block Attention Module (CBAM), a simple yet effective attention module for feed-forward convolutional neural networks. Given an intermediate feature map, our module sequentially infers attention maps along two separate dimensions, channel and spatial, then the attention maps are multiplied to the input feature map for adaptive feature refinement. Because CBAM is a lightweight and general module, it can be integrated into any CNN architectures seamlessly with negligible overheads and is end-to-end trainable along with base CNNs. We validate our CBAM through extensive experiments on ImageNet-1K, MS~COCO detection, and VOC~2007 detection datasets. Our experiments show consistent improvements in classification and detection performances with various models, demonstrating the wide applicability of CBAM. </td>
+          <td><a href="models/cbamresnet50.py">cbamresnet50.py</a></td>
+      </tr>
+  </tbody>
+</table>
+
 
 <h3>More to come... Stay tuned for additional architectures!</h3>
 
@@ -304,7 +322,7 @@ This project is licensed under the MIT License - see the <a href="https://github
 
 <h2>🫡 Acknowledgements:</h2>
 
-<p style="text-align: justify">I would like to express my deepest gratitude to the incredible research community whose groundbreaking work laid the foundation for this project. The implementation of these vision classification architectures would not have been possible without the invaluable contributions of the authors and researchers who published the original papers, which continue to inspire innovation in the field of computer vision. I extend my thanks to the following for their pioneering work. Also would like to thank PyTorch for providing a powerful and flexible deep learning framework.Lastly, a special thank you to the broader machine learning community for consistently pushing the boundaries of what’s possible, inspiring me to tackle this project with creativity and determination. This repository is a testament to the collaborative spirit of research, and I hope it will contribute to future advancements in computer vision.
+<p style="text-align: justify">I would like to express my deepest gratitude to the incredible research community whose groundbreaking work laid the foundation for this project. The implementation of these vision classification architectures would not have been possible without the invaluable contributions of the authors and researchers who published the original papers, which continue to inspire innovation in the field of computer vision. I extend my thanks to the following for their pioneering work. Also would like to thank PyTorch for providing a powerful and flexible deep learning framework. Lastly, a special thank you to the broader machine learning community for consistently pushing the boundaries of what’s possible, inspiring me to tackle this project with creativity and determination. This repository is a testament to the collaborative spirit of research, and I hope it will contribute to future advancements in computer vision.
 
 
 <h2>Contact</h2>
