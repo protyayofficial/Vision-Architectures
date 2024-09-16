@@ -1,4 +1,4 @@
-<h1>🧠 Vision Architectures from Scratch in PyTorch</h1>
+<h1 style="align: center">🧠 Vision Architectures from Scratch in PyTorch</h1>
 
 <img src="https://socialify.git.ci/protyayofficial/Vision-Architectures/image?description=1&font=Jost&language=1&name=1&pattern=Circuit%20Board&theme=Light" alt="project-image" class="project-image">
 
@@ -313,7 +313,7 @@
           <td rowspan="2"><a href="https://arxiv.org/pdf/2010.11929"><strong>ViT</strong></a> by Dosovitskiy <em>et al.</em></td>
           <td rowspan="2" style="text-align: justify;">While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks, or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources to train.
           </td>
-          <td><a href="models/ViT.py">RAN56.py</a></td>
+          <td><a href="models/ViT.py">ViT.py</a></td>
       </tr>
   </tbody>
 </table>
