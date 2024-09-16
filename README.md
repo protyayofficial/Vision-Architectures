@@ -1,91 +1,36 @@
 <style>
-  body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  }
-  h1, h2, h3 {
-      color: #2c3e50;
-  }
-  h1 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  }
-  .project-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .section {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-  }
   th, td {
       border: 1px solid #ddd;
       padding: 12px;
       text-align: left;
   }
-  th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-  }
   tr:nth-child(even) {
       background-color: #f9f9f9;
-  }
-  .abstract {
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 10px;
-  }
-  .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
   }
   .btn:hover {
       background-color: #2980b9;
   }
 </style>
-<body>
-   <h1>🧠 Vision Architectures from Scratch in PyTorch</h1>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+   <h1 style="color: #2c3e50; text-align: center; font-size: 2.5em; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">🧠 Vision Architectures from Scratch in PyTorch</h1>
 
-  <img src="https://socialify.git.ci/protyayofficial/Vision-Architectures/image?description=1&font=Jost&language=1&name=1&pattern=Circuit%20Board&theme=Light" alt="project-image" class="project-image">
+  <img src="https://socialify.git.ci/protyayofficial/Vision-Architectures/image?description=1&font=Jost&language=1&name=1&pattern=Circuit%20Board&theme=Light" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
 
   <br>
     
-  <div class="section">
-      <h2>🎯 Project Description</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h2 style="color: #2c3e50;">🎯 Project Description</h2>
       <p>This repository contains implementations of popular vision architectures from scratch using PyTorch. Each model is implemented with clean, readable, and well-documented code, making it easy to understand the underlying mechanics of each architecture.</p>
   </div>
 
-  <div class="section">
-    <h2>🚀 Architectures Implemented</h2>
-    <h3>1. Convolutional Neural Networks (CNNs)</h3>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">🚀 Architectures Implemented</h2>
+    <h3 style="color: #2c3e50;">1. Convolutional Neural Networks (CNNs)</h3>
     <h4>2012</h4>
-    <table>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
         <tr>
             <th>Model</th>
-            <th>Abstract</th>
+            <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center background-color: #f2f2f2; font-weight: bold;">Abstract</th>
             <th>Link</th>
         </tr>
         <tr>
@@ -97,11 +42,11 @@
         </tr>
     </table>
   <h4>2014</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -123,11 +68,11 @@
   </table>
 
   <h4>2015</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -158,11 +103,11 @@
   </table>
 
   <h4>2016</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -198,11 +143,11 @@
   </table>
 
   <h4>2017</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -221,11 +166,11 @@
   </table>
 
   <h4>2018</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -244,11 +189,11 @@
   </table>
 
   <h4>2019</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -292,11 +237,11 @@
   </table>
 
   <h4>2021</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -315,14 +260,14 @@
     </tbody>
   </table>
 
-  <h2> 2. Attention-based Architectures </h2>
+  <h2 style="color: #2c3e50;"> 2. Attention-based Architectures </h2>
 
   <h4>2017</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -348,11 +293,11 @@
   </table>
 
   <h4>2018</h4>
-  <table>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
     <thead>
       <tr>
         <th style="text-align: center">Model</th>
-        <th style="text-align: center">Abstract</th>
+        <th style="font-size: 0.9em; color: #555; margin-top: 10px; text-align: center">Abstract</th>
         <th style="text-align: center">Link</th>
       </tr>
     </thead>
@@ -366,8 +311,8 @@
   </table>
   </div>
 
-  <div class="section">
-    <h2>🍰 Contribution Guidelines</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">🍰 Contribution Guidelines</h2>
     <ol>
         <li>Fork the repository</li>
         <li>Create your feature branch (<code>git checkout -b feature/your-feature</code>)</li>
@@ -376,26 +321,26 @@
         <li>Open a pull request</li>
     </ol>
   </div>
-  <div class="section">
-    <h2>💻 Built with</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">💻 Built with</h2>
     <ul>
         <li>Python</li>
         <li>PyTorch</li>
     </ul>
   </div>
       
-  <div class="section">
-    <h2>🛡️ License</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">🛡️ License</h2>
     <p>This project is licensed under the MIT License - see the <a href="https://github.com/protyayofficial/Vision-Architectures/blob/main/LICENSE">LICENSE</a> file for details.</p>
   </div>
       
-  <div class="section">
-    <h2>🫡 Acknowledgements</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">🫡 Acknowledgements</h2>
     <p>I would like to express my deepest gratitude to the incredible research community whose groundbreaking work laid the foundation for this project. The implementation of these vision classification architectures would not have been possible without the invaluable contributions of the authors and researchers who published the original papers, which continue to inspire innovation in the field of computer vision. I extend my thanks to the following for their pioneering work. Also would like to thank PyTorch for providing a powerful and flexible deep learning framework. Lastly, a special thank you to the broader machine learning community for consistently pushing the boundaries of what's possible, inspiring me to tackle this project with creativity and determination. This repository is a testament to the collaborative spirit of research, and I hope it will contribute to future advancements in computer vision.</p>
   </div>
 
-  <div class="section">
-    <h2>📞 Contact</h2>
+  <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 style="color: #2c3e50;">📞 Contact</h2>
     <p>If you have any questions or suggestions, feel free to reach out!</p>
     <p><strong>Protyay Dey</strong></p>
     <ul>
@@ -406,7 +351,7 @@
     </ul>
   </div>
 
-  <div style="text-align: center; margin-top: 30px;">
-    <a href="https://github.com/protyayofficial/Vision-Architectures" class="btn">⭐ Star this Repository</a>
+  <div style="text-align: center; margin-top: 30px; background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <a href="https://github.com/protyayofficial/Vision-Architectures" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;">⭐ Star this Repository</a>
   </div>
 </body>
