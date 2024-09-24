@@ -246,6 +246,36 @@
   </tbody>
 </table>
 
+<h4>2021</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">Abstract</th>
+      <th style="text-align: center">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td rowspan="5"><a href=""><strong>ConvNeXt</strong></a> by Liu <em>et al.</em></td>
+        <td rowspan="5" style="text-align: justify;"> The "Roaring 20s" of visual recognition began with the introduction of Vision Transformers (ViTs), which quickly superseded ConvNets as the state-of-the-art image classification model. A vanilla ViT, on the other hand, faces difficulties when applied to general computer vision tasks such as object detection and semantic segmentation. It is the hierarchical Transformers (e.g., Swin Transformers) that reintroduced several ConvNet priors, making Transformers practically viable as a generic vision backbone and demonstrating remarkable performance on a wide variety of vision tasks. However, the effectiveness of such hybrid approaches is still largely credited to the intrinsic superiority of Transformers, rather than the inherent inductive biases of convolutions. In this work, we reexamine the design spaces and test the limits of what a pure ConvNet can achieve. We gradually "modernize" a standard ResNet toward the design of a vision Transformer, and discover several key components that contribute to the performance difference along the way. The outcome of this exploration is a family of pure ConvNet models dubbed ConvNeXt. Constructed entirely from standard ConvNet modules, ConvNeXts compete favorably with Transformers in terms of accuracy and scalability, achieving 87.8% ImageNet top-1 accuracy and outperforming Swin Transformers on COCO detection and ADE20K segmentation, while maintaining the simplicity and efficiency of standard ConvNets. </td>
+        <td><a href="models/ConvNeXtT.py">ConvNeXtT.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/ConvNeXtS.py">ConvNeXtS.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/ConvNeXtB.py">ConvNeXtB.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/ConvNeXtL.py">ConvNeXtL.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/ConvNeXtXL.py">ConvNeXtXL.py</a></td>
+      </tr>
+  </tbody>
+</table>
+
 <h2> 2. Attention-based Architectures </h2>
 
 <h4>2017</h4>
