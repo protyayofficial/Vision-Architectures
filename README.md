@@ -10,7 +10,8 @@
 </div>
 
 <div class="section">
-  <h2>🚀 Architectures Implemented</h2>
+  <h2>🚀 Image Classification Architectures</h2>
+  
   <h3>1. Convolutional Neural Networks (CNNs)</h3>
   <h4>2012</h4>
   <table>
@@ -244,6 +245,25 @@
           <td><a href="models/efficientnetv2_l.py">efficientnetv2_l.py</a></td>
       </tr>
   </tbody>
+  <!-- <tbody>
+      <tr>
+        <td rowspan="5"><a href=""><strong>CoATNet</strong></a> by Dai <em>et al.</em></td>
+        <td rowspan="5" style="text-align: justify;"> Transformers have attracted increasing interests in computer vision, but they still fall behind state-of-the-art convolutional networks. In this work, we show that while Transformers tend to have larger model capacity, their generalization can be worse than convolutional networks due to the lack of the right inductive bias. To effectively combine the strengths from both architectures, we present CoAtNets(pronounced "coat" nets), a family of hybrid models built from two key insights: (1) depthwise Convolution and self-Attention can be naturally unified via simple relative attention; (2) vertically stacking convolution layers and attention layers in a principled way is surprisingly effective in improving generalization, capacity and efficiency. Experiments show that our CoAtNets achieve state-of-the-art performance under different resource constraints across various datasets: Without extra data, CoAtNet achieves 86.0% ImageNet top-1 accuracy; When pre-trained with 13M images from ImageNet-21K, our CoAtNet achieves 88.56% top-1 accuracy, matching ViT-huge pre-trained with 300M images from JFT-300M while using 23x less data; Notably, when we further scale up CoAtNet with JFT-3B, it achieves 90.88% top-1 accuracy on ImageNet, establishing a new state-of-the-art result. </td>
+        <td><a href="models/CoATNet0.py">CoATNet0.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/CoATNet1.py">CoATNet1.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/CoATNet2.py">CoATNet2.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/CoATNet3.py">CoATNet3.py</a></td>
+      </tr>
+      <tr>
+        <td><a href="models/CoATNet4.py">CoATNet4.py</a></td>
+      </tr>
+  </tbody> -->
 </table>
 
 <h4>2022</h4>
@@ -276,7 +296,7 @@
   </tbody>
 </table>
 
-<h2> 2. Attention-based Architectures </h2>
+<h3> 2. Attention-based Architectures </h2>
 
 <h4>2017</h4>
 <table>
@@ -327,7 +347,7 @@
 </table>
 </div>
 
-<h2> 3. Transformer-based Architectures </h2>
+<h3> 3. Transformer-based Architectures </h2>
 
 <h4>2021</h4>
 <table>
@@ -367,6 +387,27 @@
       </tr>
   </tbody>
 </table>
+</div>
+
+<div class="section">
+  <h2>🚀 Image Segmentation Architectures</h2>
+  <h4>2015</h4>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Model</th>
+        <th style="text-align: center">Abstract</th>
+        <th style="text-align: center">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href=""><strong>UNet</strong></a> by Ronneberger <em>et al.</em></td>
+            <td style="text-align: justify;"> There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU.  </td>
+            <td><a href="models/UNet.py">UNet.py</a></td>
+        </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="section">
